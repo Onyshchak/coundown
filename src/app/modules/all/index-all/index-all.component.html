@@ -1,0 +1,4 @@
+<header class="link-header">
+  <a *ngFor="let link of links" [routerLink]="'/all/' + link">{{ link }}</a>
+</header>
+<router-outlet></router-outlet>

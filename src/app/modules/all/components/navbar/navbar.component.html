@@ -1,0 +1,40 @@
+<ng-container [ngSwitch]="state">
+  <div class="navbar" *ngSwitchCase="LayoutState.expanded">
+    <img class="navbar_logo" src="/assets/img/eucerin.png" alt="logo">
+    <button class="navbar_primary-btn" type="button" (click)="changeState(LayoutState.menu)">Menu</button>
+    <button class="navbar_primary-btn" type="button">Floorplan</button>
+    <button class="navbar_home-btn" type="button">
+      <img class="navbar_home" src="/assets/img/welcome.png" alt="welcome">
+      <span>Welcome</span>
+    </button>
+    <button class="navbar_primary-btn" type="button">Imprint</button>
+    <button class="navbar_primary-btn" type="button">Privacy Policy</button>
+    <button type="button" class="navbar_expand-btn" (click)="changeState(LayoutState.rolled)"></button>
+  </div>
+
+  <div class="navbar-hidden" *ngSwitchCase="LayoutState.rolled">
+    <button type="button" class="navbar-hidden_expand-btn" (click)="changeState(LayoutState.expanded)"></button>
+  </div>
+
+  <div class="menu" *ngSwitchCase="LayoutState.menu">
+    <header>
+      <img class="menu_logo" src="/assets/img/eucerin.png" alt="logo">
+    </header>
+    <section>
+      <div class="menu_navigate" *ngFor="let item of menuItems">
+        <button class="menu_navigate-btn">
+          <img [src]="'/assets/img/' + item.fileName" [alt]="item.fileName">
+          <span>{{ item.title }}</span>
+        </button>
+      </div>
+    </section>
+    <button class="menu_navigate-btn">
+      <img src="/assets/img/floorplan.png" alt="floorplan">
+      <span>Floorplan</span>
+    </button>
+    <footer>
+      <button class="menu_close-btn" type="button" (click)="changeState(LayoutState.expanded)">Close</button>
+    </footer>
+
+  </div>
+</ng-container>

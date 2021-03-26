@@ -1,0 +1,148 @@
+$dt-blue: rgb(29, 47, 119);
+$dt-text: rgba(42, 55, 66, 0.8);
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: $dt-text;
+
+  font-family: 'Eucerina WGL', serif;
+
+  &_logo {
+    width: 26vh;
+    margin-top: 3.5vh;
+  }
+
+  section {
+    padding: 3.2vh 1.5vw 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    > p {
+      padding: 0 18vw 2vh;
+      text-align: center;
+      font-size: 2.2vh;
+    }
+  }
+
+  &_divider {
+    height: 7px;
+    width: 100%;
+    margin-bottom: 3.7vh;
+    background-color: $dt-blue;
+  }
+
+  &_greeting {
+    font-size: 2.6vh!important;
+    font-weight: 600!important;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  &_group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1vh 8vw;
+    font-size: 2.2vh;
+
+    > span {
+      min-width: 100px;
+    }
+
+    > input,
+    > select {
+      height: 3.5vh;
+      width: 75%;
+      padding: 0;
+      border: 2px solid $dt-blue;
+      font-size: 1.8vh;
+    }
+
+    > select {
+      width: calc(75% - 4px);
+      box-sizing: content-box;
+    }
+  }
+
+  &_agree {
+    display: flex;
+    margin: 1vh calc(8vw + 8px);
+    padding: 1vh;
+    background-color: rgb(246,246,246);
+    user-select: none;
+
+    > input[type=checkbox] {
+      height: 4vw;
+      min-height: 20px;
+      max-height: 40px;
+      width: 4vw;
+      min-width: 20px;
+      max-width: 40px;
+    }
+
+    > label {
+      padding: 0 20px;
+    }
+  }
+
+  &_agree-info {
+    padding: 0 8vw;
+    line-height: 2.5vh;
+    font-size: 1.45vh;
+    font-style: italic;
+    font-weight: 600;
+
+    > span {
+      color: $dt-blue;
+    }
+
+    > b {
+      text-shadow: 1px 0 $dt-text;
+    }
+  }
+
+  &_staff {
+    padding: 1vh 8vw;
+    font-size: 2.2vh;
+
+    > input {
+      height: 2.2vh;
+      width: 17vw;
+      min-width: 120px;
+      margin-left: 1.4vw;
+      border: 2px solid $dt-blue;
+    }
+  }
+
+  &_submit {
+    margin: auto 0 3vh;
+    padding: 1.3vh 2.8vh;
+    background-color: $dt-blue;
+    font-size: 2.9vh;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &__disabled {
+      cursor: default;
+      opacity: 0.8;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'Eucerina WGL';
+  src: url('/assets/fonts/EucerinaWGL-Regular.otf');
+  src: url('/assets/fonts/EucerinaWGL-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/EucerinaWGL-Regular.woff2') format('woff2'),
+  url('/assets/fonts/EucerinaWGL-Regular.woff') format('woff'),
+  url('/assets/fonts/EucerinaWGL-Regular.ttf') format('truetype'),
+  url('/assets/fonts/EucerinaWGL-Regular.svg#EucerinaWGL-Regular') format('svg');
+}

@@ -1,0 +1,48 @@
+<div class="registration">
+  <img class="registration_logo" src="/assets/img/beiersdorf.png" alt="logo">
+  <section>
+    <div class="registration_divider"></div>
+    <p class="registration_greeting">Dear Doctor</p>
+    <p>You will be able to join our Eucerin virtual experience after you fill in the form bellow</p>
+    <p>Thank you</p>
+  </section>
+  <form [formGroup]="registrationForm">
+    <div *ngFor="let item of formItems" class="registration_group">
+      <span>{{ item.name }}:</span>
+      <ng-container *ngIf="!item?.isSelect">
+        <input aria-label="{{ item.name }}" [formControlName]="item?.controlName">
+      </ng-container>
+      <ng-container *ngIf="item?.isSelect">
+        <select aria-label="{{ item.name }}" [formControlName]="item?.controlName">
+          <option *ngIf="!registrationForm.get(item?.controlName).value">- Select -</option>
+          <option *ngFor="let option of item?.optionList">{{ option }}</option>
+        </select>
+      </ng-container>
+    </div>
+
+    <div class="registration_agree">
+      <input aria-label="agree" id="agree" type="checkbox" formControlName="agree">
+      <label for="agree" class="registration_agree-info">
+        YES, I would like to receive regularly personalized information about offers and news from Beiersdorf AG,
+        Unnastraße 48, 20245 Hamburg, Germany and other Beiersdorf subsidiaries about Eucerin and other brands
+        via e-mail. My clicking and surfing behavior during my visit of the virtual event booth will be used for
+        personalization of the content. I therefore agree to the creation of a user profile.  I am aware that I can
+        revoke this consent at any time with effect for the future via e-mail to <span>consent@beiersdorf.com</span> Further
+        information on data processing can be found in the data protection policy <b>here</b>
+      </label>
+    </div>
+
+    <!--    <div class="registration_staff">-->
+    <!--      <span>Beiersdorf Staff only</span>-->
+    <!--      <input aria-label="staff" formControlName="staffOnly">-->
+    <!--    </div>-->
+  </form>
+
+  <button
+      class="registration_submit"
+      type="submit"
+      (click)="submit()"
+      [ngClass]="{'registration_submit__disabled': registrationForm.invalid}"
+      [disabled]="registrationForm.invalid"
+  >Submit</button>
+</div>

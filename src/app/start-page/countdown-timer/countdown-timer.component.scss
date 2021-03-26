@@ -1,0 +1,132 @@
+.countdown-timer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/assets/img/countdown-timer-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  * {
+    font-family: 'Eucerina WGL', serif;
+  }
+
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #fff, rgba(208, 208, 208, 0.8), #fff);
+  }
+
+  &_logo {
+    height: auto;
+    width: 16vh;
+  }
+
+  > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 5%;
+
+    > p {
+      margin: 0;
+      padding: 0 2vw;
+      font-size: 3.8vh;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1vh;
+    }
+
+    #coming-soon {
+      margin: 3vh 0 6vh;
+      font-size: 4.3vh;
+    }
+  }
+
+  &_counters-container {
+    display: flex;
+
+    .timer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 7vw;
+      width: 5.5vw;
+      min-width: 82px;
+      min-height: 105px;
+      margin: 0 1.5vw;
+      background-color: rgba(255, 255, 255, 0.3);
+
+      &_count {
+        font-size: 5vh;
+        color: #fff;
+      }
+
+      &_divider {
+        height: 3px;
+        width: 55%;
+        margin: 5% 0 10%;
+        background-color: rgb(168, 3, 49);
+      }
+
+      &_name {
+        text-transform: uppercase;
+        font-size: 1.75vh;
+        color: #fff;
+      }
+
+      @media only screen and (max-width: 400px) {
+        min-width: 65px;
+        min-height: 83px;
+      }
+
+      @media (max-width: 720px) and (orientation: landscape) {
+        min-width: 55px;
+        min-height: 70px;
+      }
+    }
+  }
+
+  > footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    min-height: 35px;
+    background-image: linear-gradient(to right, #fff, rgba(208, 208, 208, 0.8), #fff);
+
+    > a {
+      margin: 0 8px;
+      cursor: pointer;
+
+      > img {
+        height: auto;
+        width: 3vh;
+        min-width: 25px;
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: 'Eucerina WGL';
+  src: url('/assets/fonts/EucerinaWGL-Regular.otf');
+  src: url('/assets/fonts/EucerinaWGL-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/EucerinaWGL-Regular.woff2') format('woff2'),
+  url('/assets/fonts/EucerinaWGL-Regular.woff') format('woff'),
+  url('/assets/fonts/EucerinaWGL-Regular.ttf') format('truetype'),
+  url('/assets/fonts/EucerinaWGL-Regular.svg#EucerinaWGL-Regular') format('svg');
+}

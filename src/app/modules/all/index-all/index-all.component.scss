@@ -1,0 +1,8 @@
+.link-header {
+  position: absolute;
+  z-index: 9999;
+
+  > a {
+    margin: 0 4px;
+  }
+}
