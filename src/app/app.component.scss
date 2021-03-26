@@ -22,14 +22,11 @@
     height: 18vh;
     width: 100%;
     background-image: linear-gradient(to right, #fff, rgba(208, 208, 208, 0.8), #fff);
-
-    > a {
-      height: 50%;
-    }
   }
 
   &_logo {
-    height: 100%;
+    height: auto;
+    width: 16vh;
   }
 
   > section {
@@ -41,6 +38,7 @@
     padding-bottom: 5%;
 
     > p {
+      margin: 0;
       font-size: 3.8vh;
       font-weight: 500;
       color: #fff;
@@ -106,16 +104,17 @@
     align-items: center;
     justify-content: center;
     height: 10vh;
+    min-height: 35px;
     background-image: linear-gradient(to right, #fff, rgba(208, 208, 208, 0.8), #fff);
 
     > a {
-      height: 40%;
-      min-height: 25px;
       margin: 0 8px;
       cursor: pointer;
 
       > img {
-        height: 100%;
+        height: auto;
+        width: 3vh;
+        min-width: 25px;
       }
     }
   }
