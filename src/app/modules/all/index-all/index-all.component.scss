@@ -1,6 +1,9 @@
 .link-header {
   position: absolute;
   z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 
   > a {
     margin: 0 4px;
