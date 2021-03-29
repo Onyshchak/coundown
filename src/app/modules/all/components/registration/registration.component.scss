@@ -128,7 +128,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
 
   &_submit {
     display: block;
-    margin: auto auto 3vh;
+    margin: auto auto 0;
     padding: 1.1vh 2.6vh;
     background-color: $dt-blue;
     font-size: 2.6vh;
@@ -141,6 +141,10 @@ $dt-text: rgba(42, 55, 66, 0.8);
       cursor: default;
       opacity: 0.8;
     }
+  }
+
+  &_mandatory {
+    margin: 1vh 8vw 2vh auto;
   }
 }
 
