@@ -38,6 +38,8 @@ $dt-text: rgba(42, 55, 66, 0.8);
   }
 
   &_question {
+    width: 100%;
+    box-sizing: border-box;
     padding: 4.5vh 9vw 3vh;
     line-height: 4.2vh;
     text-align: center;
