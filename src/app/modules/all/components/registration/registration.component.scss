@@ -67,6 +67,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
     > input,
     > select {
       height: 3.5vh;
+      min-height: 20px;
       width: 75%;
       box-sizing: border-box;
       padding: 0 0 0 1vw;
@@ -152,13 +153,38 @@ $dt-text: rgba(42, 55, 66, 0.8);
     }
 
     &_agree-info {
-      font-size: 10px;
+      font-size: 11px;
     }
 
     &_submit {
       display: block;
       padding: 1.1vh 2.4vh;
-      font-size: 2.5vh;
+      font-size: 2.2vh;
+    }
+  }
+}
+
+@media (max-width: 968px) and (orientation: landscape) {
+  .registration {
+    &_greeting {
+      font-size: 15px!important;
+
+      > p {
+        font-size: 14px;
+      }
+    }
+
+    &_group {
+      font-size: 13px;
+
+      > select,
+      > input {
+        font-size: 12px;
+      }
+    }
+
+    &_submit {
+      font-size: 14px;
     }
   }
 }

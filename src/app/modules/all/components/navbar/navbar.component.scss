@@ -2,7 +2,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
 $dt-bg: rgba(225, 225, 225, 0.45);
 
 .navbar {
-  position: absolute;
+  position: fixed;
   right: 0;
   left: 0;
   bottom: 0;
@@ -21,7 +21,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
   &_primary-btn {
     height: 2.13vw;
     min-width: fit-content;
-    margin-left: 2.6vw;
+    //margin-left: 2.6vw;
     margin-bottom: 0.75vw;
     padding: 0 2vw;
     font-size: 1.6vw;
@@ -45,7 +45,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 2.8vw 0 6vw;
+    //margin: 0 2.8vw 0 6vw;
     padding: 0;
     border: none;
     outline: none;
@@ -73,7 +73,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
     width: 2.13vw;
     min-width: 2.13vw;
     padding: 0;
-    margin-left: 2.1vw;
+    //margin-left: 2.1vw;
     margin-bottom: 0.95vw;
     border: none;
     outline: none;
@@ -91,7 +91,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
 }
 
 .navbar-hidden {
-  position: absolute;
+  position: fixed;
   right: 0;
   left: 0;
   bottom: 0;
@@ -120,7 +120,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -261,7 +261,7 @@ $dt-bg: rgba(225, 225, 225, 0.45);
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .navbar {
     padding: 0 12px 0 6px;
 
@@ -272,18 +272,73 @@ $dt-bg: rgba(225, 225, 225, 0.45);
       }
 
       > span {
-        font-size: 10px;
+        font-size: 13px;
       }
     }
 
     &_primary-btn {
       padding: 0 4px;
-      font-size: 11px;
+      font-size: 14px;
     }
   }
 
   .navbar-hidden {
     padding-right: 12px;
+  }
+
+  .menu {
+    &_logo {
+      width: 35vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    &_home-btn {
+      > span {
+        font-size: 10px;
+      }
+    }
+
+    &_primary-btn {
+      font-size: 11px;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar {
+    &_primary-btn {
+      padding: 0 2px;
+      font-size: 9px;
+    }
+  }
+
+  .menu {
+    padding: 3.4vh 0;
+
+    > section {
+      min-width: 320px;
+    }
+
+    &_navigate {
+      margin-bottom: 2.4vh;
+    }
+
+    &_navigate-btn {
+      > img {
+        min-width: 80px;
+      }
+
+      > span {
+        font-size: 10px;
+      }
+    }
+
+    &_close-btn {
+      font-size: 14px;
+    }
   }
 }
 
