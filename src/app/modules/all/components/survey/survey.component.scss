@@ -1,10 +1,15 @@
 $dt-text: rgba(42, 55, 66, 0.8);
 
 .survey {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  overflow-y: auto;
   font-family: 'Eucerina WGL', serif;
   color: $dt-text;
 
@@ -16,6 +21,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
 
   &_info {
     margin: 2.8vh 0;
+    padding: 0 4vw;
     text-align: center;
     font-size: 2.9vh;
     font-weight: 600;
@@ -23,6 +29,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
 
   &_requirements {
     margin: 1vh 0 2.8vh;
+    padding: 0 4vw;
     font-size: 2.7vh;
     font-weight: 600;
     letter-spacing: 0.1vw;
@@ -36,7 +43,6 @@ $dt-text: rgba(42, 55, 66, 0.8);
     text-align: center;
     font-size: 2.95vh;
     color: #fff;
-    //font-weight: 600;
     letter-spacing: 0.07vw;
   }
 
@@ -96,6 +102,77 @@ $dt-text: rgba(42, 55, 66, 0.8);
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .survey {
+
+    &_logo {
+      width: 130px;
+    }
+
+    &_info {
+      font-size: 2.6vh;
+    }
+
+    &_requirements {
+      font-size: 2.4vh;
+    }
+
+    &_question {
+      line-height: 3.4vh;
+      text-align: center;
+      font-size: 2.7vh;
+      color: #fff;
+      letter-spacing: 0.07vw;
+    }
+
+    &_answer {
+      font-size: 2.4vh;
+    }
+
+    &_submit {
+      margin: auto 0 2.5vh;
+      padding: 1.1vh 2.4vh;
+      font-size: 2.7vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .survey {
+
+    &_logo {
+      width: 100px;
+    }
+
+    &_info {
+      font-size: 2.4vh;
+    }
+
+    &_requirements {
+      font-size: 2.2vh;
+    }
+
+    &_question {
+      line-height: 3.2vh;
+      text-align: center;
+      font-size: 2.5vh;
+      color: #fff;
+      letter-spacing: 0.07vw;
+    }
+
+    &_answer {
+      font-size: 2.2vh;
+    }
+
+    &_submit {
+      margin: auto 0 2.3vh;
+      padding: 1.1vh 2.4vh;
+      font-size: 2.5vh;
+    }
+  }
+}
+
 @font-face {
   font-family: 'Eucerina WGL';
   src: url('/assets/fonts/EucerinaWGL-Regular.otf');
