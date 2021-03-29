@@ -2,12 +2,16 @@ $dt-blue: rgb(29, 47, 119);
 $dt-text: rgba(42, 55, 66, 0.8);
 
 .registration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  overflow-y: auto;
   color: $dt-text;
-
   font-family: 'Eucerina WGL', serif;
 
   &_logo {
@@ -16,12 +20,17 @@ $dt-text: rgba(42, 55, 66, 0.8);
   }
 
   section {
-    padding: 3.2vh 1.5vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
+    padding: 3.2vh 1.5vw 2.5vh;
 
     > p {
-      padding: 0 18vw 2vh;
+      margin: 0.5vh 0;
+      padding: 0 18vw 0;
       text-align: center;
       font-size: 2.2vh;
     }
@@ -30,7 +39,7 @@ $dt-text: rgba(42, 55, 66, 0.8);
   &_divider {
     height: 7px;
     width: 100%;
-    margin-bottom: 3.7vh;
+    margin-bottom: 1.2vh;
     background-color: $dt-blue;
   }
 
@@ -59,14 +68,10 @@ $dt-text: rgba(42, 55, 66, 0.8);
     > select {
       height: 3.5vh;
       width: 75%;
-      padding: 0;
+      box-sizing: border-box;
+      padding: 0 0 0 1vw;
       border: 2px solid $dt-blue;
       font-size: 1.8vh;
-    }
-
-    > select {
-      width: calc(75% - 4px);
-      box-sizing: content-box;
     }
   }
 
@@ -121,10 +126,11 @@ $dt-text: rgba(42, 55, 66, 0.8);
   }
 
   &_submit {
-    margin: auto 0 3vh;
-    padding: 1.3vh 2.8vh;
+    display: block;
+    margin: auto auto 3vh;
+    padding: 1.1vh 2.6vh;
     background-color: $dt-blue;
-    font-size: 2.9vh;
+    font-size: 2.6vh;
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
@@ -133,6 +139,26 @@ $dt-text: rgba(42, 55, 66, 0.8);
     &__disabled {
       cursor: default;
       opacity: 0.8;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .registration {
+
+    section > p {
+      padding: 0 8vw 0;
+      font-size: 2.5vh;
+    }
+
+    &_agree-info {
+      font-size: 10px;
+    }
+
+    &_submit {
+      display: block;
+      padding: 1.1vh 2.4vh;
+      font-size: 2.5vh;
     }
   }
 }

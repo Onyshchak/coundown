@@ -36,13 +36,13 @@
     <!--      <span>Beiersdorf Staff only</span>-->
     <!--      <input aria-label="staff" formControlName="staffOnly">-->
     <!--    </div>-->
-  </form>
 
-  <button
+    <button
       class="registration_submit"
       type="submit"
       (click)="submit()"
       [ngClass]="{'registration_submit__disabled': registrationForm.invalid}"
       [disabled]="registrationForm.invalid"
-  >Submit</button>
+    >Submit</button>
+  </form>
 </div>
