@@ -9,11 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        RouterModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

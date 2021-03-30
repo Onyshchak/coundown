@@ -14,7 +14,9 @@ export class CountdownTimerComponent implements OnInit {
   // April 15th at 7:00 CET
   endDate = new Date(new Date(2021, 3, 15, 7).toLocaleString('en-US', {timeZone: 'Europe/Berlin'})).getTime();
 
-  constructor() { }
+  constructor() {
+    this.calcTime();
+  }
 
   ngOnInit(): void {
     interval(1000).subscribe(() => {
