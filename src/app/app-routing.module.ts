@@ -5,11 +5,11 @@ import {CountdownTimerComponent} from './start-page/countdown-timer/countdown-ti
 
 
 const routes: Routes = [
-  {
-    path: 'all',
-    loadChildren: () => import('./modules/all/all.module')
-      .then(mod => mod.AllModule)
-  },
+  // {
+  //   path: 'all',
+  //   loadChildren: () => import('./modules/all/all.module')
+  //     .then(mod => mod.AllModule)
+  // },
   {
     path: '**',
     component: CountdownTimerComponent
